@@ -1,0 +1,8 @@
+/logs/
+/.idea/
+/out/artifacts/BC_Test_jar/
+/users/Organization1/
+/target/
+/wallet*
+/witness-file
+/src/main/java/fabric/chaincode/key_value/go/vendor/
