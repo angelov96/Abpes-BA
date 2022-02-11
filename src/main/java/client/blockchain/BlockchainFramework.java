@@ -6,5 +6,6 @@ public enum BlockchainFramework {
     Quorum,
     Corda,
     Graphene,
+    Diem,
     Test
 }

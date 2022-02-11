@@ -62,6 +62,7 @@ public class Write implements IWritingMethod {
         LOG.debug("ObjectList: " + Arrays.toString(Helper.unpack(objectList.toArray())));
         LOG.debug("Key: " + pair.getKey() + " Value: " + objectList);
 
+
         FlowProgressHandle<?> flowProgressHandle;
         FlowHandle<?> flowHandle;
 

@@ -3,7 +3,7 @@
 PREFIX="start-abpes"
 SUFFIX="x-all.sh"
 
-for SYSTEM in graphene corda fabric quorum sawtooth
+for SYSTEM in graphene corda fabric quorum sawtooth diem
 do
 for VARIABLE in 4 8 16
 do

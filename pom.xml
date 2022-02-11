@@ -140,6 +140,23 @@
                     </execution>
 
                     <execution>
+                        <id>install-javafx</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${basedir}/libs/gid/javafx/0.1/javafx.base.jar</file>
+                            <repositoryLayout>default</repositoryLayout>
+                            <groupId>gid</groupId>
+                            <artifactId>javafx-base</artifactId>
+                            <version>1.0</version>
+                            <packaging>jar</packaging>
+                            <generatePom>true</generatePom>
+                        </configuration>
+                    </execution>
+
+                    <execution>
                         <id>install-bubblesort-contract</id>
                         <phase>clean</phase>
                         <goals>
@@ -528,8 +545,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
                 <version>3.8.1</version>
             </plugin>
@@ -560,6 +577,12 @@
             <groupId>gid</groupId>
             <artifactId>diem</artifactId>
             <version>0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>gid</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <dependency>

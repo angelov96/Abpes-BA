@@ -10,7 +10,7 @@ contract keyvalue {
         //return kv[key];
 
         if (compareStrings(kv[key], "")) {
-            //return "";
+            //return "";dsf
         } else {
             emit keyValueEvent("keyValue/get", sig);
             //return kv[key];

@@ -372,7 +372,8 @@ public class ExecuteCordaWorkload implements IExecuteWorkload, IRequestDistribut
                             Configuration.NODE_LIST, Collections.singletonList(0), false));*/
                     /*GenericSelectionStrategy.selectRoundRobin(
                             Configuration.NODE_LIST, 1, true, false, "rr-wl", 1, false));*/
-                    GenericSelectionStrategy.selectFixed(Configuration.NODE_LIST, Collections.singletonList(Integer.parseInt(GeneralConfiguration.HOST_ID.split("-")[2])), true));
+                    GenericSelectionStrategy.selectFixed(Configuration.NODE_LIST,
+                            Collections.singletonList(Integer.parseInt(GeneralConfiguration.HOST_ID.split("-")[2])), true));
 
 
             proxy = new Rpc().startRpcClient(Configuration.RPC_USER, Configuration.RPC_PASSWORD,

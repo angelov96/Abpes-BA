@@ -23,6 +23,7 @@ import co.paralleluniverse.strands.Strand;
 import co.paralleluniverse.strands.SuspendableCallable;
 import com.sun.management.OperatingSystemMXBean;
 import corda.workloads.PrepareCordaWorkload;
+import diem.workloads.PrepareDiemWorkload;
 import fabric.workloads.PrepareFabricWorkload;
 import graphene.workloads.PrepareGrapheneWorkload;
 import org.apache.log4j.Logger;
@@ -361,6 +362,11 @@ public class ClientExecutorPool<E> implements IClientPool, IRequestDistribution 
             return prepareWorkload;
         } else if (blockchainFramework.equals(BlockchainFramework.Graphene)) {
             PrepareGrapheneWorkload prepareWorkload = (PrepareGrapheneWorkload) iPrepareWorkload;
+            prepareWorkload.prepareWorkload(clientObject);
+            params = prepareWorkload.getParams();
+            return prepareWorkload;
+        } else if (blockchainFramework.equals(BlockchainFramework.Diem)){
+            PrepareDiemWorkload prepareWorkload = (PrepareDiemWorkload) iPrepareWorkload;
             prepareWorkload.prepareWorkload(clientObject);
             params = prepareWorkload.getParams();
             return prepareWorkload;
